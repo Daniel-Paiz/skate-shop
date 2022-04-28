@@ -2,24 +2,28 @@ body {
     background-color: #ffb22ee4;
 }
 
-nav {
+/* nav { 
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
 }
-
+*/
 main {
-    padding-top: 155px;
+    padding-top: 190px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+
 }
 
 .div__barra {
     border: solid 1px;
-    width: 100%;
     background: linear-gradient(90deg, rgba(0, 224, 207, 0.45702030812324934) 0%, rgba(0, 212, 255, 0.8547794117647058) 51%, rgba(0, 241, 255, 1) 100%);
-    position: fixed;
     display: flex;
-    z-index: 2;
+    opacity: 0.90;
 }
 
 .logo__principal {
@@ -28,28 +32,16 @@ main {
     width: 20%;
 }
 
-.lista__inicio {
-    list-style: none;
-    padding-right: 5px;
-    font-family: sans-serif;
-}
-
-.lista__item {
+.lista__item{
     display: inline-block;
     margin-right: 80px;
-    animation: boton 1s ease 1s infinite normal forwards;
+    border-radius: 30px;
+    background-color: rgb(119, 248, 255) ;
+    text-align: center;
 }
 
-@keyframes boton {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-        transform: scale(1) translateY(0);
-    }
-
-    100% {
-        box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
-        transform: scale(1.1) translateY(-12px);
-    }
+.lista__item:hover {
+    background-color: white;
 }
 
 .lista__inicio a {
@@ -135,6 +127,7 @@ main {
 
 .caja__texto {
     border: solid 1px;
+    margin-top: 20px;
     background-color: #fcdc3c;
     height: 30vh;
     width: 40vw;
@@ -152,6 +145,7 @@ main {
 }
 
 .tabla {
+    border: solid 1px;
     height: 50vh;
     width: 40vw;
     position: relative;
@@ -168,16 +162,19 @@ main {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
 
+}
 .ul__footer {
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items:flex-end;
 }
+footer{
+    padding-top: 25px;
 
+}
 .lista__footer {
     list-style: none;
     display: inline-block;
@@ -203,7 +200,7 @@ input {
     margin-right: auto;
 }
 
-@media only screen and (max-width: 1020px) {
+/* @media only screen and (max-width: 1020px) { 
     .lista__item {
         margin-right: 40px;
     }
@@ -236,4 +233,4 @@ input {
         grid-row-gap: 50px;
         justify-content: space-evenly;
     }
-}
+}*/
