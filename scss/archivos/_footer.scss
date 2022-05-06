@@ -1,0 +1,35 @@
+.ul__footer {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:flex-end;
+}
+footer{
+    padding-top: 25px;
+
+}
+.lista__footer {
+    list-style: none;
+    display: inline-block;
+
+}
+
+.imagenes__footer {
+    height: 55px;
+    width: 55px;
+
+}
+
+.a__footer {
+    text-decoration: none;
+    background-color: $color-principal;
+
+
+}
+
+input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
