@@ -79,7 +79,7 @@ main {
 .caja__texto {
     border: solid 1px;
     margin-top: 20px;
-    background-color: $color-fondo-tex;
+    background-color: map-get($map:$palette, $key:'color-fondo-tex' );
     height: 30vh;
     width: 40vw;
     font-family: sans-serif;
@@ -100,7 +100,7 @@ main {
     height: 50vh;
     width: 40vw;
     position: relative;
-    background-color: $color-fondo-tex;
+    background-color: map-get($map:$palette, $key:'color-fondo-tex' );
     margin: 0 auto;
 }
 

@@ -21,7 +21,7 @@ header {
     display: inline-block;
     margin-right: 80px;
     border-radius: 30px;
-    background-color: $color-secundario;
+    background-color: map-get($map: $palette, $key:'color-secundario');
     text-align: center;
 }
 
