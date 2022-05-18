@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="skate, Tablas, dc, element, cleaver, creature">
-    <meta name="description" content="skate-shop campana tienda enfocada en el ambiente de el skate a nivel mundial , lo mejor en tablas">
+    <meta name="description"
+        content="skate-shop campana tienda enfocada en el ambiente de el skate a nivel mundial , lo mejor en tablas">
     <link rel="icon" type="image/x-icon" href="../imagenes/skate.png">
     <script src="https://kit.fontawesome.com/9c8d6e6b48.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
     <title>skate shop/Tablas</title>
-
 </head>
 
 <body class="body">
@@ -28,7 +28,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse justify-content-end navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav lista__inicio a">
+                    <div class="navbar-nav lista__inicio ">
                         <a class="nav-link active lista__item" aria-current="page" href="../index.html">Inicio</a>
                         <a class="nav-link active lista__item" href="#">Tablas</a>
                         <a class="nav-link active lista__item" href="./Trucks.html">Trucks</a>
@@ -42,76 +42,107 @@
     </header>
     <main>
         <h1 class="titulo__h1_t">Tablas</h1>
-        <div class="main__tablas">
-            <div class="main__imagenes">
-                <figure>
-                    <img src="../imagenes/tablas imagen/santa cruz-verde.jpg" alt="santa cruz verde"
-                        class="imagen_de_local_tablas1">
-                </figure>
-                <figure>
-                    <img src="../imagenes/tablas imagen/santa cruz-marron.jpg" alt="santa cruz marron"
-                        class="imagen_de_local_tablas2">
-                </figure>
-                <figure>
-                    <img src="../imagenes/tablas imagen/cleaver-fran.jpg" alt="cleaver grafitti"
-                        class="imagen_de_local_tablas3">
-                </figure>
-                <figure>
-                    <img src="../imagenes/tablas imagen/cleaver-negray rosa.jpg" alt="cleaver negra y rosa"
-                        class="imagen_de_local_tablas4">
-                </figure>
-                <figure>
-                    <img src="../imagenes/tablas imagen/creature-Milton Martinez.jpg" alt="creature de MM"
-                        class="imagen_de_local_tablas5">
-                </figure>
-                <figure>
-                    <img src="../imagenes/tablas imagen/creature-basica.jpg" alt="creature modelo basico"
-                        class="imagen_de_local_tablas6">
-                </figure>
-            </div>
-            <table border="01" cellpadding="10" cellspacing="1" class="tabla">
-                <tr class="tr">
-                    <th>Stock</th>
-                    <th>Marca</th>
-                    <th>Precio</th>
-                    <th>Envio</th>
-                </tr>
-                <tr>
-                    <td>ilimitado</td>
-                    <td>santa cruz verde</td>
-                    <td>16.000</td>
-                    <td>600</td>
-                </tr>
-                <tr>
-                    <td>ilimitado</td>
-                    <td>santa cruz marron</td>
-                    <td>16.000</td>
-                    <td>600</td>
-                </tr>
-                <tr>
-                    <td>ilimitado</td>
-                    <td>cleaver grafitti</td>
-                    <td>12.000</td>
-                    <td>600</td>
-                </tr>
-                <tr>
-                    <td>ilimitado</td>
-                    <td>cleaver negra y rosa</td>
-                    <td>12.000</td>
-                    <td>600</td>
-                </tr>
-                <tr>
-                    <td>limitado</td>
-                    <td>creature mm</td>
-                    <td>18.000</td>
-                    <td>700</td>
-                </tr>
-                <tr>
-                    <td>limitado</td>
-                    <td>creature base </td>
-                    <td>15.000</td>
-                    <td>500</td>
-                </tr>
+        <div class="d-flex align-items-center flex-column">
+            <section class="carucel_contenedor">
+                <div id="carouselExampleIndicators" class="carousel slide w-100" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                            aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../imagenes/tablas imagen/santa cruz-verde.jpg" class="d-block w-100"
+                                alt="santa cruz verde">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../imagenes/tablas imagen/santa cruz-marron.jpg" class="d-block w-100"
+                                alt="santa cruz marron">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../imagenes/tablas imagen/cleaver-fran.jpg" class="d-block w-100"
+                                alt="cleaver grafitti">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../imagenes/tablas imagen/cleaver-negray rosa.jpg" class="d-block w-100"
+                                alt="cleaver negra y rosa">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../imagenes/tablas imagen/creature-Milton Martinez.jpg" class="d-block w-100"
+                                alt="milton martinez">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../imagenes/tablas imagen/creature-basica.jpg" class="d-block w-100"
+                                alt="tabla basica">
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+            </section>
+            <table class="table table-warning table-hover">
+                <thead class="table-info">
+                    <tr>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Envio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">ilimitado</th>
+                        <td>santa cruz verde</td>
+                        <td>16.000</td>
+                        <td>600</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ilimitado</th>
+                        <td>santa cruz marron</td>
+                        <td>16.000</td>
+                        <td>600</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ilimitado</th>
+                        <td>cleaver grafitti</td>
+                        <td>12.000</td>
+                        <td>600</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ilimitado</th>
+                        <td>cleaver negra y rosa</td>
+                        <td>12.000</td>
+                        <td>600</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">limitado</th>
+                        <td>creature mm</td>
+                        <td>18.000</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">limitado</th>
+                        <td>creature base </td>
+                        <td>15.000</td>
+                        <td>500</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </main>
