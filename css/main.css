@@ -46,13 +46,22 @@ main {
   main .div__main {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center; }
     main .div__main .imagen_ilustrativa {
-      width: 90%; }
+      width: 70%; }
+    main .div__main .caja__texto {
+      border: solid 1px;
+      background-color: #fcdc3c;
+      width: 75%;
+      align-items: center;
+      margin: 8px; }
   main .carucel_contenedor {
-    width: 400px;
-    height: auto; }
+    width: 500px;
+    height: auto;
+    margin: 20px; }
+    main .carucel_contenedor .carucel_contenedor img {
+      width: 500px;
+      height: 300px; }
   main .formulario {
     background-color: #15172b;
     border-radius: 20px;

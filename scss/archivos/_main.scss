@@ -25,17 +25,31 @@ main {
     .div__main {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
 
         .imagen_ilustrativa {
-            width: 90%;
+            width: 70%;
         }
+
+        .caja__texto {
+            border: solid 1px;
+            background-color: map-get($map: $palette, $key: 'color-fondo-tex');
+            width: 75%;
+            align-items: center;
+            margin: 8px;
+        }
+
+
     }
 
     .carucel_contenedor {
-        width: 400px;
-        height: auto;
+        width: 500px;
+        height:auto;
+        margin: 20px;
+        .carucel_contenedor img {
+            width: 500px;
+            height: 300px;
+        }
     }
 
     .formulario {
