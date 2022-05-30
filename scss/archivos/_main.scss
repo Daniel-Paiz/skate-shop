@@ -44,22 +44,26 @@ main {
 
     .carucel_contenedor {
         width: 500px;
-        height:auto;
+        height: auto;
         margin: 20px;
+
         .carucel_contenedor img {
             width: 500px;
             height: 300px;
         }
+
     }
 
     .formulario {
+        width: 300px;
+        height:300px;
+        position: relative;
         background-color: #15172b;
-        border-radius: 20px;
-        box-sizing: border-box;
-        padding: 20px;
-        width: 15%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        border: solid 1px;
+        
+        .div_form{
+            position: absolute;
+        }
     }
+
 }

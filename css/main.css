@@ -63,14 +63,13 @@ main {
       width: 500px;
       height: 300px; }
   main .formulario {
+    width: 300px;
+    height: 300px;
+    position: relative;
     background-color: #15172b;
-    border-radius: 20px;
-    box-sizing: border-box;
-    padding: 20px;
-    width: 15%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
+    border: solid 1px; }
+    main .formulario .div_form {
+      position: absolute; }
 
 footer {
   padding-top: 25px; }
