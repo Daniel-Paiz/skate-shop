@@ -29,6 +29,7 @@ main {
 
         .imagen_ilustrativa {
             width: 70%;
+            height: auto;
         }
 
         .caja__texto {
@@ -42,27 +43,40 @@ main {
 
     }
 
-    .carucel_contenedor {
-        width: 500px;
-        height: auto;
-        margin: 20px;
+    .table {
+        margin-top: 300px;
+    }
 
-        .carucel_contenedor img {
-            width: 500px;
-            height: 300px;
-        }
+
+    .carucel_contenedor {
+        width: 600px;
+        height: 600px;
+        margin: 20px;
+        background-color: black;
 
     }
 
-    .formulario {
+    .carucel_contenedor img {
+        width: auto;
+        height: 600px;
+    }
+
+
+
+    form {
         width: 300px;
-        height:300px;
-        position: relative;
-        background-color: #15172b;
-        border: solid 1px;
-        
-        .div_form{
-            position: absolute;
+        background-color: map-get($map: $palette, $key: 'color-fondo-tex');
+        border-radius: 4px;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 300px;
+
+        .formulario {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            text-align: center;
         }
     }
 

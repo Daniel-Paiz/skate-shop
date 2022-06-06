@@ -48,28 +48,37 @@ main {
     flex-direction: column;
     align-items: center; }
     main .div__main .imagen_ilustrativa {
-      width: 70%; }
+      width: 70%;
+      height: auto; }
     main .div__main .caja__texto {
       border: solid 1px;
       background-color: #fcdc3c;
       width: 75%;
       align-items: center;
       margin: 8px; }
+  main .table {
+    margin-top: 300px; }
   main .carucel_contenedor {
-    width: 500px;
-    height: auto;
-    margin: 20px; }
-    main .carucel_contenedor .carucel_contenedor img {
-      width: 500px;
-      height: 300px; }
-  main .formulario {
+    width: 600px;
+    height: 600px;
+    margin: 20px;
+    background-color: black; }
+  main .carucel_contenedor img {
+    width: auto;
+    height: 600px; }
+  main form {
     width: 300px;
-    height: 300px;
-    position: relative;
-    background-color: #15172b;
-    border: solid 1px; }
-    main .formulario .div_form {
-      position: absolute; }
+    background-color: #fcdc3c;
+    border-radius: 4px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 300px; }
+    main form .formulario {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      text-align: center; }
 
 footer {
   padding-top: 25px; }
