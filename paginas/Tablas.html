@@ -10,6 +10,7 @@
         content="skate-shop campana tienda enfocada en el ambiente de el skate a nivel mundial , lo mejor en tablas">
     <link rel="icon" type="image/x-icon" href="../imagenes/skate.png">
     <script src="https://kit.fontawesome.com/9c8d6e6b48.js" crossorigin="anonymous"></script>
+    <script src="../js/skateshop.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
@@ -98,7 +99,7 @@
                 </div>
             </section>
 
-            
+
         </div>
         <table class="table table-warning table-hover">
             <thead class="table-info">
@@ -107,44 +108,64 @@
                     <th scope="col">Marca</th>
                     <th scope="col">Precio</th>
                     <th scope="col">Envio</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">ilimitado</th>
-                    <td>santa cruz verde</td>
+                    <th scope="row">15</th>
+                    <td>Santa cruz verde</td>
                     <td>16.000</td>
                     <td>600</td>
+                    <td>
+                        <button id="agregarSCVerde" class="btn btn-primary" type="button">Agregar al carrito</button>
+                    </td>
                 </tr>
                 <tr>
-                    <th scope="row">ilimitado</th>
-                    <td>santa cruz marron</td>
+                    <th scope="row">10</th>
+                    <td>Santa cruz marron</td>
                     <td>16.000</td>
                     <td>600</td>
+                    <td>
+                        <button id="agregarSCMarron" class="btn btn-primary" type="button">Agregar al carrito</button>
+                    </td>
                 </tr>
                 <tr>
-                    <th scope="row">ilimitado</th>
-                    <td>cleaver grafitti</td>
+                    <th scope="row">5</th>
+                    <td>Cleaver grafitti</td>
                     <td>12.000</td>
                     <td>600</td>
+                    <td>
+                        <button id="agregarCleaverG" class="btn btn-primary" type="button">Agregar al carrito</button>
+                    </td>
                 </tr>
                 <tr>
-                    <th scope="row">ilimitado</th>
-                    <td>cleaver negra y rosa</td>
+                    <th scope="row">13</th>
+                    <td>Cleaver negra y rosa</td>
                     <td>12.000</td>
                     <td>600</td>
+                    <td>
+                        <button id="agregarCleaverNyR" class="btn btn-primary" type="button">Agregar al carrito</button>
+                    </td>
                 </tr>
                 <tr>
-                    <th scope="row">limitado</th>
-                    <td>creature mm</td>
+                    <th scope="row">5</th>
+                    <td>Creature mm</td>
                     <td>18.000</td>
                     <td>700</td>
+                    <td>
+                        <button id="agregarMiltonM" class="btn btn-primary" type="button">Agregar al carrito</button>
+                    </td>
                 </tr>
                 <tr>
-                    <th scope="row">limitado</th>
-                    <td>creature base </td>
+                    <th scope="row">13</th>
+                    <td>Creature base </td>
                     <td>15.000</td>
                     <td>500</td>
+                    <td>
+                        <button id="agregarTablaBasica" class="btn btn-primary" type="button">Agregar al
+                            carrito</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -168,6 +189,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script>
+        const botonAgregar1 = document.getElementById("agregarSCVerde");
+        botonAgregar1.addEventListener('click', () => {
+            agregarALcarrito(productos.find(producto => producto.id === 1));
+        });
+        const botonAgregar2 = document.getElementById("agregarSCMarron");
+        botonAgregar2.addEventListener('click', () => {
+            agregarALcarrito(productos.find(producto => producto.id === 2));
+        });
+        const botonAgregar3 = document.getElementById("agregarCleaverG");
+        botonAgregar3.addEventListener('click', () => {
+            agregarALcarrito(productos.find(producto => producto.id === 3));
+        });
+        const botonAgregar4 = document.getElementById("agregarCleaverNyR");
+        botonAgregar4.addEventListener('click', () => {
+            agregarALcarrito(productos.find(producto => producto.id === 4));
+        });
+        const botonAgregar5 = document.getElementById("agregarMiltonM");
+        botonAgregar5.addEventListener('click', () => {
+            agregarALcarrito(productos.find(producto => producto.id === 5));
+        });
+        const botonAgregar6 = document.getElementById("agregarTablaBasica");
+        botonAgregar6.addEventListener('click', () => {
+            agregarALcarrito(productos.find(producto => producto.id === 6));
+        });
+    </script>
 </body>
 
 </html>
