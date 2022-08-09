@@ -1,20 +1,20 @@
-const EdadPermitida = 18;
-const EdadDelUsuario = prompt('Ingresar edad por favor');
-if (EdadPermitida <= EdadDelUsuario) {
-    alert('PerfectoContinue')
-}
-else { alert('Para contactar con el negocio, por favor llenar datos con los datos de un adulto responsable gracias') }
-switch (EdadDelUsuario) {
-    case '19':
-        alert('tenes envio gratis')
-        break;
-    case '20':
-        alert(' por tener 20 tenes descueto de10 % y envio gratis')
-        break;
-    case '23':
-        alert('por tener 23 tenes descuento de 25% y envio gratis.')
-        break;
-}
+// const EdadPermitida = 18;
+// const EdadDelUsuario = prompt('Ingresar edad por favor');
+// if (EdadPermitida <= EdadDelUsuario) {
+//     alert('PerfectoContinue')
+// }
+// else { alert('Para contactar con el negocio, por favor llenar datos con los datos de un adulto responsable gracias') }
+// switch (EdadDelUsuario) {
+//     case '19':
+//         alert('tenes envio gratis')
+//         break;
+//     case '20':
+//         alert(' por tener 20 tenes descueto de10 % y envio gratis')
+//         break;
+//     case '23':
+//         alert('por tener 23 tenes descuento de 25% y envio gratis.')
+//         break;
+// }
 const productos = [
     { id: 1, type: 'tabla', nombre: 'santa cruz verde', stock: 15, price: 16000 },
     { id: 2, type: 'tabla', nombre: 'santa cruz marron', stock: 10, price: 16000 },
@@ -37,18 +37,23 @@ const productos = [
 const tablas = productos.filter((producto) => producto.type === 'tabla');
 const trucks = productos.filter((producto) => producto.type === 'truck');
 const accesorios = productos.filter((producto) => producto.type === 'accesorio');
-const carrito = [];
 
-function agregarALcarrito(productoAAgregar) {
-    const tenemosStock = validarStock(productoAAgregar);
-    if (tenemosStock) {
-        carrito.push(productoAAgregar);
-    }
-
-    console.log(carrito);
+function obtenerCarritoDelStorage() {
+    const carrito = localStorage.getItem('carrito');
+    return carrito ? JSON.parse(carrito) : [];
 }
 
-function validarStock(productoAAgregar) {
+function agregarALcarrito(productoAAgregar) {
+    const carrito = obtenerCarritoDelStorage();
+    const tenemosStock = validarStock(productoAAgregar, carrito);
+    if (tenemosStock) {
+        carrito.push(productoAAgregar);
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        actualizarEtiquetaCantidadCarrito();
+    }
+}
+
+function validarStock(productoAAgregar, carrito) {
     const cantidadEnCarrito = carrito.filter(productoEnCarrito => productoEnCarrito === productoAAgregar).length;
     const cantidadSolicitada = cantidadEnCarrito + 1;
 
@@ -59,14 +64,46 @@ function validarStock(productoAAgregar) {
 }
 
 function borrarProductoDelcarrito(nombreDelProducto) {
+    const carrito = obtenerCarritoDelStorage();
     const productoABorrar = carrito.findIndex((producto) => producto.nombre === nombreDelProducto);
     carrito.splice(productoABorrar, 1);
 
-    console.log(carrito);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarEtiquetaCantidadCarrito();
 }
-// agregarALcarrito(productos[0], 12);
-// agregarALcarrito(productos[4], 18);
-// agregarALcarrito(productos[9], 1);
-// agregarALcarrito(productos[12], 5);
 
-// borrarProductoDelcarrito('santa cruz verde');
+function actualizarEtiquetaCantidadCarrito() {
+    const carrito = obtenerCarritoDelStorage();
+
+    const etiquetaCantidadCarrito = document.getElementById("etiqueta_cantidad_carrito");
+    etiquetaCantidadCarrito.innerHTML = carrito.length;
+}
+
+function obtenerHTMLPorProducto(producto) {
+    return `
+        <tr>
+            <td scope="row">${producto.stock}</td>
+            <td>${producto.nombre}</td>
+            <td>${producto.price}</td>
+            <td>
+                <button id="${producto.type}_${producto.id}" class="btn btn-primary" type="button">Agregar al carrito</button>
+            </td>
+        </tr>
+    `;
+}
+
+function prepararBotonesAgregarAlCarrito(producto) {
+    const botonAgregarProducto = document.getElementById(`${producto.type}_${producto.id}`);
+
+    botonAgregarProducto.addEventListener("click", () => {
+        agregarALcarrito(producto);
+    });
+}
+
+function agregarProductosATabla(producto, contenedorDeProductos) {
+    contenedorDeProductos.innerHTML += obtenerHTMLPorProducto(producto);
+}
+
+window.addEventListener("load", () => {
+    actualizarEtiquetaCantidadCarrito();
+});

@@ -30,5 +30,22 @@ header {
                         }
                     }
                 }
+
+.boton_carrito {
+    position: relative;
+}
                         
-                    
+.imagen_carrito {
+    width: 32px;
+    height: auto;
+}
+
+.etiqueta_cantidad_carrito {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    background-color: map-get($map: $palette, $key: 'color-principal');
+    color: white;
+    padding: 0 5px;
+}
