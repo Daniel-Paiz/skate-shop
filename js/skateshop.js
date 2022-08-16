@@ -1,4 +1,4 @@
-// const EdadPermitida = 18;
+// const EdadPermitida = 18;    
 // const EdadDelUsuario = prompt('Ingresar edad por favor');
 // if (EdadPermitida <= EdadDelUsuario) {
 //     alert('PerfectoContinue')
@@ -39,7 +39,7 @@ const trucks = productos.filter((producto) => producto.type === 'truck');
 const accesorios = productos.filter((producto) => producto.type === 'accesorio');
 
 function obtenerCarritoDelStorage() {
-    const carrito = localStorage.getItem('carrito');
+    const carrito = sessionStorage.getItem('carrito');
     return carrito ? JSON.parse(carrito) : [];
 }
 
@@ -48,7 +48,7 @@ function agregarALcarrito(productoAAgregar) {
     const tenemosStock = validarStock(productoAAgregar, carrito);
     if (tenemosStock) {
         carrito.push(productoAAgregar);
-        localStorage.setItem('carrito', JSON.stringify(carrito));
+        sessionStorage.setItem('carrito', JSON.stringify(carrito));
         actualizarEtiquetaCantidadCarrito();
     }
 }
@@ -68,7 +68,7 @@ function borrarProductoDelcarrito(nombreDelProducto) {
     const productoABorrar = carrito.findIndex((producto) => producto.nombre === nombreDelProducto);
     carrito.splice(productoABorrar, 1);
 
-    localStorage.setItem('carrito', JSON.stringify(carrito));
+    sessionStorage.setItem('carrito', JSON.stringify(carrito));
     actualizarEtiquetaCantidadCarrito();
 }
 
@@ -107,3 +107,4 @@ function agregarProductosATabla(producto, contenedorDeProductos) {
 window.addEventListener("load", () => {
     actualizarEtiquetaCantidadCarrito();
 });
+console.log(localStorage.getItem('carrito'));
