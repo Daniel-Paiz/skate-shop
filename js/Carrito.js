@@ -1,24 +1,24 @@
-// window.addEventListener('load', () => {
-//     (async () => {
+window.addEventListener('load', () => {
+    (async () => {
 
-//         const { value: accept } = await Swal.fire({
-//             title: 'Se nesesita ser mayor de edad para proceder con la compra en caso contrario recurir  a padres o tutor a cargo',
-//             input: 'checkbox',
-//             inputValue: 1,
-//             inputPlaceholder:
-//                 'aceptar condiciones',
-//             confirmButtonText:
-//                 'Continue <i class="fa fa-arrow-right"></i>',
-//             inputValidator: (result) => {
-//                 return !result && 'You need to agree with T&C'
-//             }
-//         })
+        const { value: accept } = await Swal.fire({
+            title: 'Se nesesita ser mayor de edad para proceder con la compra en caso contrario recurir  a padres o tutor a cargo',
+            input: 'checkbox',
+            inputValue: 1,
+            inputPlaceholder:
+                'aceptar condiciones',
+            confirmButtonText:
+                'Continue <i class="fa fa-arrow-right"></i>',
+            inputValidator: (result) => {
+                return !result && 'vas a tener que aceptar no hay de otra'
+            }
+        })
 
-//         if (accept) {
-//             Swal.fire('gracias por confiar en nosotros atte skateshop campana')
-//         }
-//     })()
-// })
+        if (accept) {
+            Swal.fire('gracias por confiar en nosotros atte skateshop campana')
+        }
+    })()
+})
 
 function obtenerHTMLPorProductodecarrito(producto) {
     return `

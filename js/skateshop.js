@@ -1,20 +1,3 @@
-// const EdadPermitida = 18;    
-// const EdadDelUsuario = prompt('Ingresar edad por favor');
-// if (EdadPermitida <= EdadDelUsuario) {
-//     alert('PerfectoContinue')
-// }
-// else { alert('Para contactar con el negocio, por favor llenar datos con los datos de un adulto responsable gracias') }
-// switch (EdadDelUsuario) {
-//     case '19':
-//         alert('tenes envio gratis')
-//         break;
-//     case '20':
-//         alert(' por tener 20 tenes descueto de10 % y envio gratis')
-//         break;
-//     case '23':
-//         alert('por tener 23 tenes descuento de 25% y envio gratis.')
-//         break;
-// }
 const productos = [
     { id: 1, type: 'tabla', nombre: 'santa cruz verde', stock: 15, price: 16000 },
     { id: 2, type: 'tabla', nombre: 'santa cruz marron', stock: 10, price: 16000 },
@@ -107,4 +90,4 @@ function agregarProductosATabla(producto, contenedorDeProductos) {
 window.addEventListener("load", () => {
     actualizarEtiquetaCantidadCarrito();
 });
-console.log(localStorage.getItem('carrito'));
+
