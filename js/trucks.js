@@ -1,6 +1,10 @@
 window.addEventListener("load", () => {
     const contenedorDeTrucks = document.getElementById("tablaDeTrucks");
-    trucks.forEach((truck) => agregarProductosATabla(truck, contenedorDeTrucks));
 
-    trucks.forEach(prepararBotonesAgregarAlCarrito);
+    fetch('../data/trucks.json')
+    .then(response => response.json())
+    .then(trucks => {
+        trucks.forEach((tabla) => agregarProductosATabla(tabla, contenedorDeTrucks));
+        trucks.forEach(prepararBotonesAgregarAlCarrito);
+    });
 });

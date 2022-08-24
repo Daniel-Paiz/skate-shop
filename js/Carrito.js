@@ -34,13 +34,21 @@ function obtenerHTMLPorProductodecarrito(producto) {
 function prepararBotonesBorrarDeCarrito(producto) {
     const botonBorrarProducto = document.getElementById(`${producto.type}_${producto.id}`);
     botonBorrarProducto.addEventListener("click", () => {
-        borrarProductoDelcarrito(producto);
+        borrarProductoDelcarrito(producto.nombre);
     });
 }
-window.addEventListener("load", () => {
+
+function inicializarPantallaDeCarrito(productosEnCarrito) {
     const contenedorDeProductos = document.getElementById("tablaDeCarrito");
-    tablas.forEach((tabla) => {
+    console.log(productosEnCarrito);
+    contenedorDeProductos.innerHTML = '';
+    productosEnCarrito.forEach((tabla) => {
         contenedorDeProductos.innerHTML += obtenerHTMLPorProductodecarrito(tabla);
     });
-    tablas.forEach(prepararBotonesBorrarDeCarrito);
+    productosEnCarrito.forEach(prepararBotonesBorrarDeCarrito);
+}
+
+window.addEventListener("load", () => {
+    const productosEnCarrito = obtenerCarritoDelStorage();
+    inicializarPantallaDeCarrito(productosEnCarrito);
 })

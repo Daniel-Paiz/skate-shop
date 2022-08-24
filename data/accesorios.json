@@ -1,0 +1,37 @@
+[
+    {
+        "id": 13,
+        "type": "accesorio",
+        "nombre": "lijas santa cruz",
+        "stock": 8,
+        "price": 2000
+    },
+    {
+        "id": 14,
+        "type": "accesorio",
+        "nombre": "ruedas",
+        "stock": 24,
+        "price": 1800
+    },
+    {
+        "id": 15,
+        "type": "accesorio",
+        "nombre": "rulemanes",
+        "stock": 24,
+        "price": 2100
+    },
+    {
+        "id": 16,
+        "type": "accesorio",
+        "nombre": "pads",
+        "stock": 12,
+        "price": 600
+    },
+    {
+        "id": 17,
+        "type": "accesorio",
+        "nombre": "llaves t",
+        "stock": 6,
+        "price": 1700
+    }
+]

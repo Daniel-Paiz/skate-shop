@@ -1,0 +1,44 @@
+[
+    {
+        "id": 7,
+        "type": "truck",
+        "nombre": "independent hollow",
+        "stock": 15,
+        "price": 3500
+    },
+    {
+        "id": 8,
+        "type": "truck",
+        "nombre": "independent 11 pro",
+        "stock": 15,
+        "price": 2700
+    },
+    {
+        "id": 9,
+        "type": "truck",
+        "nombre": "thunder morado",
+        "stock": 9,
+        "price": 4200
+    },
+    {
+        "id": 10,
+        "type": "truck",
+        "nombre": "hunder 149",
+        "stock": 10,
+        "price": 5000
+    },
+    {
+        "id": 11,
+        "type": "truck",
+        "nombre": "element carbon",
+        "stock": 13,
+        "price": 2500
+    },
+    {
+        "id": 12,
+        "type": "truck",
+        "nombre": "element rasta",
+        "stock": 12,
+        "price": 3800
+    }
+]
