@@ -42,9 +42,13 @@ main {
 
 
     }
+    .div_tabla{
+        display: flex;
+        justify-content: center;
+    }
 
     .table {
-        margin-top: 300px;
+        width: 75%;
     }
 
 

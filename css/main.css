@@ -72,8 +72,11 @@ main {
       width: 75%;
       align-items: center;
       margin: 8px; }
+  main .div_tabla {
+    display: flex;
+    justify-content: center; }
   main .table {
-    margin-top: 300px; }
+    width: 75%; }
   main .carucel_contenedor {
     width: 600px;
     height: 600px;
